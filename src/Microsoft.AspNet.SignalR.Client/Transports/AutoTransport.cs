@@ -68,7 +68,7 @@ namespace Microsoft.AspNet.SignalR.Client.Transports
         public Task<NegotiationResponse> Negotiate(IConnection connection, string connectionData)
         {
             var task = GetNegotiateResponse(connection, connectionData);
-#if NET45
+#if NET45 || NET35
             return task.Then(response =>
             {
                 if (!response.TryWebSockets)
