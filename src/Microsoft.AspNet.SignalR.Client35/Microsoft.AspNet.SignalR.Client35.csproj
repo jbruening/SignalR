@@ -46,6 +46,9 @@
     <Reference Include="System.Threading">
       <HintPath>..\..\packages\TaskParallelLibrary.1.0.2856.0\lib\Net35\System.Threading.dll</HintPath>
     </Reference>
+    <Reference Include="websocket-sharp">
+      <HintPath>..\..\packages\WebSocketSharp.1.0.3-rc6\lib\websocket-sharp.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\Common\CommonAssemblyInfo.cs">
@@ -260,6 +263,13 @@
     <Compile Include="LibExtensions\StringBuilderExt.cs" />
     <Compile Include="LibExtensions\StringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transports\WebSockets\ClientWebSocketHandler.cs" />
+    <Compile Include="Transports\WebSockets\WebSocketExtensions.cs" />
+    <Compile Include="Transports\WebSockets\WebSocketHandler.cs" />
+    <Compile Include="Transports\WebSockets\WebSocketMessage.cs" />
+    <Compile Include="Transports\WebSockets\WebSocketMessageReader.cs" />
+    <Compile Include="Transports\WebSockets\WebSocketWrapperRequest.cs" />
+    <Compile Include="Transports\WebSocketTransport.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="..\Microsoft.AspNet.SignalR.Client\Resources.resx">
