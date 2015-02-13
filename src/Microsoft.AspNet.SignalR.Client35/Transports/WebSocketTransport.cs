@@ -113,7 +113,7 @@ namespace Microsoft.AspNet.SignalR.Client.Transports
             }
 
             // If we don't throw here when the WebSocket isn't open, WebSocketHander.SendAsync will noop.
-            if (_webSocketHandler.WebSocket.State != WebSocketState.Open)
+            if (_webSocketHandler.WebSocket.ReadyState != WebSocketState.Open)
             {
                 // Make this a faulted task and trigger the OnError even to maintain consistency with the HttpBasedTransports
                 var ex = new InvalidOperationException(Resources.Error_DataCannotBeSentDuringWebSocketReconnect);
@@ -186,7 +186,7 @@ namespace Microsoft.AspNet.SignalR.Client.Transports
                     _connection.OnError(ex);
                 }
 
-                await Task.Delay(ReconnectDelay);
+                await TaskEx.Delay(ReconnectDelay);
             }
         }
 
@@ -224,7 +224,7 @@ namespace Microsoft.AspNet.SignalR.Client.Transports
 
                 if (_webSocket != null)
                 {
-                    _webSocket.Dispose();
+                    //_webSocket.Dispose();
                 }
 
                 if (_webSocketTokenSource != null)
