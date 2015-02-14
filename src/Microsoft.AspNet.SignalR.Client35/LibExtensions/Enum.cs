@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Microsoft.AspNet.SignalR.Client.LibExtensions
+namespace Microsoft.AspNet.SignalR.Client
 {
     static class EnumExt
     {

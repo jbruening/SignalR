@@ -9,9 +9,7 @@ using Microsoft.AspNet.SignalR.Client.Http;
 using Microsoft.AspNet.SignalR.Client.Infrastructure;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#else
+#if !NET35
 using StringHelper = System.String;
 #endif
 

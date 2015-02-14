@@ -6,9 +6,6 @@ using System.Globalization;
 using System.IO;
 using System.Text;
 using Newtonsoft.Json;
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#endif
 
 namespace Microsoft.AspNet.SignalR.Client
 {
@@ -91,7 +88,7 @@ namespace Microsoft.AspNet.SignalR.Client
             return connection.State == ConnectionState.Reconnecting;
         }
 
-#if !PORTABLE && !__ANDROID__ && !IOS
+#if !PORTABLE && !__ANDROID__ && !IOS && !NET35
         public static IObservable<string> AsObservable(this Connection connection)
         {
             return connection.AsObservable(value => value);

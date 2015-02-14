@@ -259,7 +259,6 @@
       <Link>Infrastructure\TaskAsyncHelper.cs</Link>
     </Compile>
     <Compile Include="LibExtensions\Enum.cs" />
-    <Compile Include="LibExtensions\IObservable.cs" />
     <Compile Include="LibExtensions\StringBuilderExt.cs" />
     <Compile Include="LibExtensions\StringHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

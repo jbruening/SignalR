@@ -5,9 +5,7 @@ using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Text;
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#else
+#if !NET35
 using StringHelper = System.String;
 #endif
 

@@ -5,10 +5,7 @@ using Newtonsoft.Json.Linq;
 using Microsoft.AspNet.SignalR.Client.Infrastructure;
 using Microsoft.AspNet.SignalR.Infrastructure;
 using System.Collections.Generic;
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#endif
-#if !PORTABLE
+#if !PORTABLE && !NET35
 namespace Microsoft.AspNet.SignalR.Client.Hubs
 {
     /// <summary>

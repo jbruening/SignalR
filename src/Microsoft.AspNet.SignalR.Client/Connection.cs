@@ -21,9 +21,6 @@ using Newtonsoft.Json.Linq;
 #if (NET4 || NET45)
 using System.Security.Cryptography.X509Certificates;
 #endif
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#endif
 
 namespace Microsoft.AspNet.SignalR.Client
 {

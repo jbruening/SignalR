@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace Microsoft.AspNet.SignalR.Client.LibExtensions
+namespace Microsoft.AspNet.SignalR.Client
 {
     static class StringBuilderExt
     {

@@ -4,13 +4,10 @@ using System;
 using System.Globalization;
 using Microsoft.AspNet.SignalR.Client.Infrastructure;
 using Microsoft.AspNet.SignalR.Infrastructure;
-#if NET35
-using Microsoft.AspNet.SignalR.Client.LibExtensions;
-#endif
 
 namespace Microsoft.AspNet.SignalR.Client
 {
-#if !PORTABLE
+#if !PORTABLE && !NET35
     public class ObservableConnection<T> : IObservable<T>
     {
         private readonly Connection _connection;
